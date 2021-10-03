@@ -1,7 +1,8 @@
 .Results {
-  margin-top: 30px;
+  margin: 30px auto;
   background: white;
   border-radius: 10px;
   padding: 30px 40px;
   color: #7c73e6;
+  max-width: 700px;
 }
