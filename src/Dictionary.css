@@ -1,0 +1,8 @@
+.Dictionary .Search-button {
+  transition: all 200ms ease-in-out;
+}
+
+.Dictionary .Search-button:hover {
+  background: #c4c1e0;
+  color: white;
+}
