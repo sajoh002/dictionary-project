@@ -1,3 +1,11 @@
 .App {
   margin: 30px;
 }
+
+.Search-engine {
+  max-width: 900px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffe9e3;
+}
