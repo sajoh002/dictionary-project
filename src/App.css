@@ -1,11 +1,22 @@
 .App {
-  margin: 30px;
+  margin: 30px auto;
+  max-width: 900px;
 }
 
-.Search-engine {
-  max-width: 900px;
+.App .Search-engine {
   border-radius: 10px;
   margin: 0 auto;
-  padding: 30px;
-  background: #ffe9e3;
+}
+
+.App .title {
+  color: white;
+}
+
+.App a {
+  color: #484d51;
+  text-decoration: none;
+}
+.App a:hover {
+  text-decoration: underline;
+  color: white;
 }

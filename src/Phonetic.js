@@ -10,11 +10,11 @@ export default function Phonetic(props) {
   }
 
   if (audio === undefined) {
-    return <h4 className="mt-3">{props.phonetic.text}</h4>;
+    return <h4 className="Phonetic mt-3">{props.phonetic.text}</h4>;
   } else {
     return (
-      <h4 className="mt-3">
-        <a href="/" className="text-decoration-none" onClick={playAudio}>
+      <h4 className="Phonetic mt-3">
+        <a href="/" className="text-decoration-none me-2" onClick={playAudio}>
           🔉
         </a>
         {props.phonetic.text}

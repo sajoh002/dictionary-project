@@ -7,7 +7,7 @@ export default function Example(props) {
     return (
       <div className="Example">
         <h4>example:</h4>
-        <p className="subsection">{props.example}</p>
+        <div className="example subsection">"{props.example}"</div>
       </div>
     );
   }

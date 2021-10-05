@@ -4,5 +4,10 @@
 
 .Meaning .subsection {
   font-size: 23px;
-  color: #c4c1e0;
+  color: #818d97;
+  margin: 10px 0;
+}
+
+.Meaning .example {
+  font-style: italic;
 }

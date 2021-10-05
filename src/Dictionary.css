@@ -1,8 +1,18 @@
+.Dictionary input {
+  border-radius: 20px;
+  width: 50%;
+  border: 1px solid #2f3847;
+  padding: 10px;
+  color: #2f3847;
+}
+
 .Dictionary .Search-button {
   transition: all 200ms ease-in-out;
+  border: 1px solid #2f3847;
+  padding: 10px 20px;
 }
 
 .Dictionary .Search-button:hover {
-  background: #c4c1e0;
+  background: #2f3847;
   color: white;
 }
