@@ -12,8 +12,12 @@
   color: white;
 }
 
+.App footer {
+  color: white;
+}
+
 .App a {
-  color: #484d51;
+  color: #bbbbbb;
   text-decoration: none;
 }
 .App a:hover {
