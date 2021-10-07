@@ -6,13 +6,13 @@
   color: #2f3847;
 }
 
-.Dictionary .Search-button {
-  transition: all 200ms ease-in-out;
+section {
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid #2f3847;
-  padding: 10px 20px;
-}
-
-.Dictionary .Search-button:hover {
-  background: #2f3847;
-  color: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+  color: #2f3847;
+  max-width: 800px;
+  word-wrap: break-word;
 }

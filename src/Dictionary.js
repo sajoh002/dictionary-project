@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Results from "./Results";
+import Photos from "./Photos";
 import axios from "axios";
 
 import "./Dictionary.css";
@@ -8,15 +9,26 @@ export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
   }
 
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
+  }
+
   function search() {
-    // documentatio: https://dictionaryapi.dev/
+    // documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    let pexelsApiKey =
+      "563492ad6f9170000100000146ae0b0ef3b54fb59f3be2db5920af6b";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    const headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
@@ -42,11 +54,9 @@ export default function Dictionary(props) {
             placeholder="Enter a word to look up"
             onChange={handleKeywordChange}
           />
-          <button type="submit" className="btn btn-light ms-3 Search-button">
-            Search
-          </button>
         </form>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
