@@ -16,3 +16,9 @@ section {
   max-width: 800px;
   word-wrap: break-word;
 }
+
+@media (max-width: 750px) {
+  section {
+    padding: 20px;
+  }
+}
